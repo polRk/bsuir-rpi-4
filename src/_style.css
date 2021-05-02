@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply flex p-4 gap-4 relative
+}
+
+a:visited {
+  @apply text-indigo-800
+}
+
+.clip {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sentinel {
+  height: 1px;
+}
