@@ -8,7 +8,7 @@ export interface ILanguageModel extends Observer {
 }
 
 export class LanguageModel extends Observer implements ILanguageModel {
-  private _language = navigator.language
+  private _language = navigator.language.slice(0,2)
   private _languages: ILanguage[] = ['ar', 'de', 'en', 'es', 'fr', 'he', 'it', 'nl', 'no', 'pt', 'ru', 'se', 'ud', 'zh']
 
   get language(): ILanguage {

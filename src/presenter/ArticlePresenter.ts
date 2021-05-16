@@ -62,7 +62,7 @@ export class ArticlePresenter {
       const view = this.viewFactory(article)
       Renderer.render(this.list, view.getElement(), RenderPosition.BEFORE_END)
 
-      if (index === this.model.articles.length * 0.7) {
+      if (index === this.model.articles.length * 0.9) {
         this.drawSentinel()
       }
     })

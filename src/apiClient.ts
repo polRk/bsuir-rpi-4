@@ -96,7 +96,7 @@ export class CachedApiClient extends ApiClient implements IApiClient {
   }
 
   async getSources(parameters?: GetSourcesRequestParams): Promise<ISourcesResponse> {
-    const language = navigator.language
+    const language = navigator.language.slice(0,2)
     const query = new URLSearchParams({ language, ...parameters })
     const url = `${this.baseURL}/v2/sources?${query}`
 
